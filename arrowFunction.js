@@ -4,7 +4,7 @@
 
 let argArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-let givenArr=(arr) => {
+let givenArr = (arr) => {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 !== 0) {
             console.log(arr[i])
@@ -17,7 +17,7 @@ givenArr(argArr)
 
 let stringArray = ("hi i am a string array").split(" ");
 
-let titelArr=(str) => {
+let titelArr = (str) => {
     {
         for (var i = 0; i < str.length; i++) {
             str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
@@ -28,33 +28,60 @@ let titelArr=(str) => {
 }
 
 titelArr(stringArray);
-    ;
+;
 
 //3.Sum of all numbers in an array
 let sumArr = [1, 2, 3, 4, 5, 6, 7, 8];
 
 let resultArr = 0;
 
-let equalTo=(sum)=>{
+let equalTo = (sum) => {
 
-    {for(let i=0;i<sum.length;i++){
-      resultArr+=sum[i];
-    }console.log(resultArr)
-   }
+    {
+        for (let i = 0; i < sum.length; i++) {
+            resultArr += sum[i];
+        } console.log(resultArr)
+    }
 }
 equalTo(sumArr)
 
 //Return all the palindromes in an array
 
-let paloriArr =["mom","dad","madam","nun"];
+let paloriArr = ["mom", "dad", "madam", "nun"];
 
-let finalAns=(palori)=>{
+let finalAns = (palori) => {
 
-for(let i=0;i<palori.length;i++){
-    console.log(palori[i].split("").reverse().join(''))
-}
-let paloriArr1 =palori;
-console.log(palori===paloriArr1)
+    for (let i = 0; i < palori.length; i++) {
+        console.log(palori[i].split("").reverse().join(''))
+    }
+    let paloriArr1 = palori;
+    console.log(palori === paloriArr1)
 }
 finalAns(paloriArr);
+
+//prime number 
+
+(() => {
+    var arr = [1, 2, 3, 4, 5, 6, 7];
+    var a = [];
+    const prime = function () {
+        for (var x of arr) {
+            var b = 0;
+            for (var i = 2; i <= x / 2; i++) {
+                if (x % i == 0) {
+                    b = 1;
+                    break;
+                }
+            }
+            if (b == 0) {
+                a.push(x)
+            }
+        }
+        return a
+
+    }(arr)
+    console.log(prime);
+})()
+
+
 
